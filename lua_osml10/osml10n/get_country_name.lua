@@ -49,9 +49,8 @@ function osml10n.get_country_name(tags, targetlang, append)
   local names = {}
 
   -- append name in target language (does nothing if tags["name:" .. targetlang] is nil)
-  if (append ~= true) then
-    table.insert(names,tags["name:" .. targetlang])
-  end
+  table.insert(names,tags["name:" .. targetlang])
+  
   -- table for country/language mapping
   langs = require "osml10n.country_languages"
   -- generate an array of all official country names
@@ -76,6 +75,7 @@ function osml10n.get_country_name(tags, targetlang, append)
     end
   end
   if append then
+    table.remove(names, 1)
     -- does nothing if tags["name:" .. targetlang] is nil
     table.insert(names,tags["name:" .. targetlang])
   end
