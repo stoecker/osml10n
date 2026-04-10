@@ -25,7 +25,7 @@ setup(
         "scipy",
         "scikit-learn", 
         "pykakasi == 2.3.0",
-        "tltk == 1.9.1",
+        "pythainlp",
         "pinyin_jyutping_sentence == 1.3",
         "pyicu",
         "shapely",
@@ -33,9 +33,6 @@ setup(
         "requests",
         "pandas"
     ],
-    extras_require={
-        "pythainlp": ["pythainlp"]
-    },
     scripts = [ "transcription-daemon/geo-transcript-srv.py", "transcription-cli/transcribe.py" ],
     packages = [ "osml10n" ],
     package_data = { 'osml10n' : [ 'boundaries/**' ] }
