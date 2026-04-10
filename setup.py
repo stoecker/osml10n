@@ -33,6 +33,9 @@ setup(
         "requests",
         "pandas"
     ],
+    extras_require={
+        "pythainlp": ["pythainlp"]
+    },
     scripts = [ "transcription-daemon/geo-transcript-srv.py", "transcription-cli/transcribe.py" ],
     packages = [ "osml10n" ],
     package_data = { 'osml10n' : [ 'boundaries/**' ] }
